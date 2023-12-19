@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+int main()
+
+{
+ 	
+ 	int  N, i, j, b, a;
+ 	
+ 	a=0;
+ 	
+ 	scanf("%d",&N);
+ 	
+ 	for(i=2;i<=N;i++)
+ 	
+ 	{
+ 		
+ 		for ( int j = 1; j <i; j++ )
+        	
+        	if ( i % j == 0 )                            //判断一个数的所有因子 
+        	
+        	a = a + j;                                   //将因子相加 
+        	
+        	if(a==i)                                     //判断是否为完数 
+        	
+        	{
+        		
+        		printf( "%d its factors are ", i );      
+         		
+         		for(b=1;b<i;b++)
+         		
+         		{
+          		
+          			if ( i % b == 0 )
+          			
+          			printf("%d ",b);                     //输出完数所有的因子 
+   			
+   			}
+   			
+   			printf("\n");
+  		
+  		}
+  		
+  		a=0;                                     //对因子和进行初始化，为下一次的完数判断做准备 
+ 
+ 	}
+ 
+ return 0;
+
+}
